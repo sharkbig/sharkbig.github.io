@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
 
-
+    <meta charset="utf-8">
     <style>
       .map {
         height: 800px;
@@ -18,19 +18,19 @@
     <div id="map" class="map"></div>
 
     <script  type='text/javascript'>
-   
+
 
   // LINE STYLE
   var style = {
     'Point': new ol.style.Style({
       image: new ol.style.Circle({
-        // fill 
+        // fill
         fill: new ol.style.Fill({
           color: 'rgba(255,255,0,0.4)'
         }),
         radius: 2,
 
-        // stroke 
+        // stroke
         stroke: new ol.style.Stroke({
           color: '#ff0',
           width: 1
@@ -47,24 +47,24 @@
     'MultiLineString': new ol.style.Style({
       stroke: new ol.style.Stroke({
         color: '#FF2D00',
-        width: 3
+        width: 1.5
       })
     })
   };
 
-
-
-
 var loadgpx = new ol.layer.Vector({
   source: new ol.source.Vector({
-    url: '/rescue/data/1215-1222馬望海搜救路線._Lite.gpx',
+    url: 'data/1215-1222馬望海搜救路線._Lite.gpx',
     format: new ol.format.GPX()
   }),
-  
+
   style: function(feature){
     return style[feature.getGeometry().getType()];
   }
 });
+
+
+
 
 // plot on map
 var map = new ol.Map({
@@ -74,8 +74,7 @@ var map = new ol.Map({
         source: new ol.source.XYZ({
           url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
         })
-      }), 
-
+      }),
       loadgpx
     ],
     view: new ol.View({
@@ -85,6 +84,17 @@ var map = new ol.Map({
   });
 
 
+////////////////////////////////////////////////////////////////
+// update gpx code //
+
+
+
+
+
+
     </script>
+
+    <script type="text/javascript" src="update.js"></script>
+
   </body>
 </html>
