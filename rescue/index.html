@@ -18,19 +18,19 @@
     <div id="map" class="map"></div>
 
     <script  type='text/javascript'>
-   
+
 
   // LINE STYLE
   var style = {
     'Point': new ol.style.Style({
       image: new ol.style.Circle({
-        // fill 
+        // fill
         fill: new ol.style.Fill({
           color: 'rgba(255,255,0,0.4)'
         }),
         radius: 2,
 
-        // stroke 
+        // stroke
         stroke: new ol.style.Stroke({
           color: '#ff0',
           width: 1
@@ -47,7 +47,37 @@
     'MultiLineString': new ol.style.Style({
       stroke: new ol.style.Stroke({
         color: '#FF2D00',
-        width: 3
+        width: 1.5
+      })
+    })
+  };
+  var style_update = {
+    'Point': new ol.style.Style({
+      image: new ol.style.Circle({
+        // fill
+        fill: new ol.style.Fill({
+          color: 'rgba(255,255,0,0.4)'
+        }),
+        radius: 2,
+
+        // stroke
+        stroke: new ol.style.Stroke({
+          color: '#ff0',
+          width: 1
+        })
+      })
+    }),
+
+    'LineString': new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#002BFF',
+        width: 1.5
+      })
+    }),
+    'MultiLineString': new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#002BFF',
+        width: 1.5
       })
     })
   };
@@ -60,9 +90,22 @@ var loadgpx = new ol.layer.Vector({
     url: '/rescue/data/1215-1222馬望海搜救路線._Lite.gpx',
     format: new ol.format.GPX()
   }),
-  
+
   style: function(feature){
     return style[feature.getGeometry().getType()];
+  }
+});
+
+
+
+var update = Vector({
+  source: new ol.source.Vector({
+    url:'/rescue\data\20191223 陳芃+天人_B區神木群.gpx'
+    format: new ol.format.GPX()
+
+  }),
+  style: function(feature){
+    return style_update[feature.getGeometry().getType()];
   }
 });
 
@@ -74,9 +117,10 @@ var map = new ol.Map({
         source: new ol.source.XYZ({
           url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
         })
-      }), 
+      }),
 
-      loadgpx
+      loadgpx,
+      update
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([121.30171,24.53225]),
