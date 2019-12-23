@@ -31,7 +31,7 @@ var style_update = {
     })
   })
 };
-var update = Vector({
+var update = ol.layer.Vector({
   source: new ol.source.Vector({
     url:'/rescue\data\20191223 陳芃+天人_B區神木群.gpx'
     format: new ol.format.GPX()
@@ -41,3 +41,11 @@ var update = Vector({
     return style_update[feature.getGeometry().getType()];
   }
 });
+
+
+// plot on map
+var map = new ol.Map({
+    target: 'map',
+    layers: [update]
+  })
+  });
