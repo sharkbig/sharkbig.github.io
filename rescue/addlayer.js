@@ -1,69 +1,4 @@
 (function() {
-  var style_update = {
-    'Point': new ol.style.Style({
-      image: new ol.style.Circle({
-  
-        fill: new ol.style.Fill({
-          color: 'rgba(255,255,0,0.4)'
-        }),
-  
-        radius: 2,
-  
-        stroke: new ol.style.Stroke({
-          color: '#ff0',
-          width: 1
-        })
-      })
-    }),
-  
-    'LineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#FFEC00',
-        width:1.5
-      })
-    }),
-    'MultiLineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#FFEC00',
-        width: 1.5
-      })
-    })
-  };
-  
-  var style_update1 = {
-    'Point': new ol.style.Style({
-      image: new ol.style.Circle({
-  
-        fill: new ol.style.Fill({
-          color: 'rgba(0,255,0,0.4)'
-        }),
-  
-        radius: 2,
-  
-        stroke: new ol.style.Stroke({
-          color: '#ff0',
-          width: 1
-        })
-      })
-    }),
-  
-    'LineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#00FFEC',
-        width:1.5
-      })
-    }),
-    'MultiLineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#00FFEC',
-        width: 1.5
-      })
-    })
-  };
-  
-
-
-      
   // Create a map containing two group layers
   var map = new ol.Map({
       target: 'map',
@@ -76,7 +11,7 @@
                       source: new ol.source.XYZ({
                         url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
                       })
-                    }),                    
+                    }),
 
               ]
           }),
@@ -92,7 +27,7 @@
                       style: function(feature) {
                           return style_update[feature.getGeometry().getType()];
                         }
-                      
+
                     }),
                     new ol.layer.Vector({
                       title: '20191223陳芃+天人_B區神木群',
@@ -106,19 +41,19 @@
                       // projection: new ol.Projection("EPSG:4326")
                     }),
                     new ol.layer.Vector({
-                      title: '20191224 天人岩屋_B區神木群上方',
+                      title: '2019-12-24 tracks',
                       source: new ol.source.Vector({
-                        url: './data/20191224 天人岩屋_B區神木群上方.gpx',
+                        url: './data/1224_lite.gpx',
                         format: new ol.format.GPX()
                       }),
                       style: function(feature) {
-                          return style_update1[feature.getGeometry().getType()];
+                          return style_1224[feature.getGeometry().getType()];
                         }
                       // projection: new ol.Projection("EPSG:4326")
-                    })                         
+                    })
 
               ]
-          }), 
+          }),
 
       ],
       view: new ol.View({
