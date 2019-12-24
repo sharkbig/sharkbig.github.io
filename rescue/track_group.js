@@ -36,9 +36,12 @@ var track_group = new ol.layer.Group({
             url: './data/1224_lite.gpx',
             format: new ol.format.GPX()
           }),
-          style: function(feature) {
-              return style_1224[feature.getGeometry().getType()];
-            }
+          style: function(feature){
+            return style_1124(feature)
+          }
+          // style: function(feature){
+          //     return style_1224[feature.getGeometry().getType()];
+          //   }
           // projection: new ol.Projection("EPSG:4326")
         })
 
