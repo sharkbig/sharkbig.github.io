@@ -11,7 +11,7 @@ var track_group = new ol.layer.Group({
               format: new ol.format.GPX()
             }),
             style: function(feature) {
-                return style_update[feature.getGeometry().getType()];
+                return style_update(feature);
               }
 
           }),
@@ -24,7 +24,7 @@ var track_group = new ol.layer.Group({
             format: new ol.format.GPX()
           }),
           style: function(feature) {
-              return style_update1[feature.getGeometry().getType()];
+              return style_update1(feature);
             }
           // projection: new ol.Projection("EPSG:4326")
         }),
@@ -37,11 +37,8 @@ var track_group = new ol.layer.Group({
             format: new ol.format.GPX()
           }),
           style: function(feature){
-            return style_1124(feature)
+            return style_1124(feature);
           }
-          // style: function(feature){
-          //     return style_1224[feature.getGeometry().getType()];
-          //   }
           // projection: new ol.Projection("EPSG:4326")
         })
 
