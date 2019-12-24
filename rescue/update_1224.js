@@ -1,4 +1,4 @@
-var style_update = {
+var style_1224 = {
   'Point': new ol.style.Style({
     image: new ol.style.Circle({
 
@@ -29,18 +29,16 @@ var style_update = {
   })
 };
 
-var update = new ol.layer.Vector({
+var update_1224 = new ol.layer.Vector({
 
   source: new ol.source.Vector({
-
     url:'data/20191224 天人岩屋_B區神木群上方.gpx',
     format: new ol.format.GPX()
-
   }),
 
   style: function(feature){
-    return style_update[feature.getGeometry().getType()];
+    return style_1224[feature.getGeometry().getType()];
   }
 });
 
-map.addLayer(update)
+map.addLayer(update_1224)
