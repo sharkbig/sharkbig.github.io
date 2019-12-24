@@ -30,24 +30,56 @@
     })
   };
   
+  var style_update1 = {
+    'Point': new ol.style.Style({
+      image: new ol.style.Circle({
+  
+        fill: new ol.style.Fill({
+          color: 'rgba(0,255,0,0.4)'
+        }),
+  
+        radius: 2,
+  
+        stroke: new ol.style.Stroke({
+          color: '#ff0',
+          width: 1
+        })
+      })
+    }),
+  
+    'LineString': new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#00FFEC',
+        width:1.5
+      })
+    }),
+    'MultiLineString': new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: '#00FFEC',
+        width: 1.5
+      })
+    })
+  };
+  
 
-  var loadgpx = new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url: './data/test.gpx',
-        format: new ol.format.GPX()
-      }),
-    
-      style: function(feature){
-        return style_update[feature.getGeometry().getType()];
-      }
-    });
 
       
   // Create a map containing two group layers
   var map = new ol.Map({
       target: 'map',
       layers: [
+          new ol.layer.Group({
+              'title': 'Base maps',
+              layers: [
+                  new ol.layer.Tile({
+                      title: '魯地圖',
+                      source: new ol.source.XYZ({
+                        url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
+                      })
+                    }),                    
 
+              ]
+          }),
           new ol.layer.Group({
               'title': 'GPX maps',
               layers: [
@@ -69,43 +101,32 @@
                         format: new ol.format.GPX()
                       }),
                       style: function(feature) {
-                          return style[feature.getGeometry().getType()];
+                          return style_update1[feature.getGeometry().getType()];
                         }
                       // projection: new ol.Projection("EPSG:4326")
                     }),
                     new ol.layer.Vector({
                       title: '20191224 天人岩屋_B區神木群上方',
                       source: new ol.source.Vector({
-                        url: './data/天人岩屋_B區神木群上方.gpx',
+                        url: './data/20191224 天人岩屋_B區神木群上方.gpx',
                         format: new ol.format.GPX()
                       }),
                       style: function(feature) {
-                          return style[feature.getGeometry().getType()];
+                          return style_update1[feature.getGeometry().getType()];
                         }
                       // projection: new ol.Projection("EPSG:4326")
                     })                         
 
               ]
           }), 
-          new ol.layer.Group({
-              'title': 'Base maps',
-              layers: [
-                  new ol.layer.Tile({
-                      title: '魯地圖',
-                      source: new ol.source.XYZ({
-                        url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
-                      })
-                    }),                    
 
-              ]
-          }),
       ],
       view: new ol.View({
           center: ol.proj.fromLonLat([121.30171,24.53225]),
           zoom: 14
       })
   });
-  map.addLayer(loadgpx);
+
   // Create a LayerSwitcher instance and add it to the map
   var layerSwitcher = new ol.control.LayerSwitcher();
   map.addControl(layerSwitcher);
