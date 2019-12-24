@@ -1,4 +1,4 @@
-// track style
+// track style and add label
 
 var style_update1 = function(feature){
   var geom = feature.getGeometry().getType()
