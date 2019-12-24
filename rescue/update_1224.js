@@ -18,13 +18,13 @@ var style_update = {
   'LineString': new ol.style.Style({
     stroke: new ol.style.Stroke({
       color: '#FFEC00',
-      width:10
+      width:1.5
     })
   }),
   'MultiLineString': new ol.style.Style({
     stroke: new ol.style.Stroke({
       color: '#FFEC00',
-      width:10
+      width: 1.5
     })
   })
 };
