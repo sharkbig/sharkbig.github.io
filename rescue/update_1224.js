@@ -32,7 +32,7 @@ var style_1224 = {
 var update_1224 = new ol.layer.Vector({
 
   source: new ol.source.Vector({
-    url:'data/20191224 天人岩屋_B區神木群上方.gpx',
+    url:'data/1224_lite.gpx',
     format: new ol.format.GPX()
   }),
 
