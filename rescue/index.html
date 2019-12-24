@@ -1,89 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
   <head>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
-
     <meta charset="utf-8">
-    <style>
-      .map {
-        height: 800px;
-        width: 100%;
-      }
-    </style>
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
-    <title>rescue</title>
 
+    </style>
+    
+    <title>gpx map</title>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://openlayers.org/en/v6.1.1/css/ol.css" />
+    <link rel="stylesheet" href="ol-layerswitcher.css" />
+    <link rel="stylesheet" href="layerswitcher.css" />
   </head>
+
   <body>
     <div id="map" class="map"></div>
-
-    <script  type='text/javascript'>
-  // LINE STYLE
-  var style = {
-    'Point': new ol.style.Style({
-      image: new ol.style.Circle({
-        // fill
-        fill: new ol.style.Fill({
-          color: 'rgba(255,255,0,0.4)'
-        }),
-        radius: 2,
-
-        // stroke
-        stroke: new ol.style.Stroke({
-          color: '#ff0',
-          width: 1
-        })
-      })
-    }),
-
-    'LineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#FF2D00',
-        width: 1.5
-      })
-    }),
-    'MultiLineString': new ol.style.Style({
-      stroke: new ol.style.Stroke({
-        color: '#FF2D00',
-        width: 1.5
-      })
-    })
-  };
-
-var loadgpx = new ol.layer.Vector({
-  source: new ol.source.Vector({
-    url: 'data/1215-1222馬望海搜救路線._Lite.gpx',
-    format: new ol.format.GPX()
-  }),
-
-  style: function(feature){
-    return style[feature.getGeometry().getType()];
-  }
-});
-
-
-
-
-// plot on map
-var map = new ol.Map({
-    target: 'map',
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.XYZ({
-          url: 'https://rs.happyman.idv.tw/map/moi_osm/{z}/{x}/{y}.png'
-        })
-      }),
-      loadgpx
-    ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([121.30171,24.53225]),
-      zoom: 14
-    })
-  });
-    </script>
-
-    <script type="text/javascript" src="update.js"></script>
-    <!-- <script type="text/javascript" src="select.js"></script> -->
-    <script type="text/javascript" src="update_1224.js"></script>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.2.0/build/ol.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v6.1.1/build/ol.js"></script>
+    <script src="ol-layerswitcher.js"></script>
+    <script src="addlayer.js"></script>
+    <script src="gpx.js"></script>
   </body>
 </html>
