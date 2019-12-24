@@ -62,8 +62,9 @@ var style_update = function(feature){
           })
         }),
         text: new ol.style.Text({
-          font:'bold 10pt Arial',
+          font:'bold 8pt Arial',
           text: name,
+          background:'#000000'
         })
       })
 
