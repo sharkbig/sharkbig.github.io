@@ -44,7 +44,6 @@ var style_update1 = function(feature){
 };
 
 
-
 var style_update = function(feature){
   var geom = feature.getGeometry().getType()
   var name = feature.get('name')
@@ -88,7 +87,6 @@ var style_update = function(feature){
       return null
   }
 };
-
 
 
 var style_1124 = function(feature){

@@ -1,11 +1,9 @@
-
-
 var track_group = new ol.layer.Group({
     'title': 'GPX maps',
     layers: [
         new ol.layer.Vector({
             title: '1215-1222馬望海搜救路線',
-            visible:true,
+            visible: false,
             source: new ol.source.Vector({
               url: './data/1215-1222馬望海搜救路線._Lite.gpx',
               format: new ol.format.GPX()
@@ -13,9 +11,7 @@ var track_group = new ol.layer.Group({
             style: function(feature) {
                 return style_update(feature);
               }
-
           }),
-
 
         new ol.layer.Vector({
           title: '20191223陳芃+天人_B區神木群',
@@ -41,6 +37,5 @@ var track_group = new ol.layer.Group({
           }
           // projection: new ol.Projection("EPSG:4326")
         })
-
     ]
 })
