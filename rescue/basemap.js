@@ -1,5 +1,3 @@
-
-
 var basemap = new ol.layer.Group({
     'title': 'Base maps',
     layers: [
