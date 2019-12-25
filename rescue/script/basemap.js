@@ -31,7 +31,7 @@ var basemap = new ol.layer.Group({
               'FORMAT':'image/png',
               'crs':'EPSG:4326',
               'dpiMode':'7',
-              'VERSION':'1.1.0'
+              'VERSION':'1.1.1'
             },
             transition:0,
             serverType:'mapserver',
