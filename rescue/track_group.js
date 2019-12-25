@@ -36,6 +36,21 @@ var track_group = new ol.layer.Group({
             return style_1124(feature);
           }
           // projection: new ol.Projection("EPSG:4326")
-        })
+        }),
+
+
+      new ol.layer.Vector({
+        title: '2019-12-25 tracks',
+        source: new ol.source.Vector({
+          url:'./data/1225_lite.gpx',
+          format: new ol.format.GPX()
+        }),
+        style: function(feature){
+          return style_1225(feature);
+        }
+      })
+
+      
     ]
+
 })
