@@ -9,7 +9,8 @@ var track_group = new ol.layer.Group({
               format: new ol.format.GPX()
             }),
             style: function(feature) {
-                return style_update(feature);
+                // return style_update(feature);
+                return style_setter(feature,'#FFEC00')
               }
           }),
 
@@ -20,7 +21,8 @@ var track_group = new ol.layer.Group({
             format: new ol.format.GPX()
           }),
           style: function(feature) {
-              return style_update1(feature);
+              return style_setter(feature,'#00FFEC');
+              
             }
           // projection: new ol.Projection("EPSG:4326")
         }),
@@ -33,7 +35,7 @@ var track_group = new ol.layer.Group({
             format: new ol.format.GPX()
           }),
           style: function(feature){
-            return style_1124(feature);
+            return style_setter(feature,'#FF000');
           }
           // projection: new ol.Projection("EPSG:4326")
         }),
@@ -46,11 +48,11 @@ var track_group = new ol.layer.Group({
           format: new ol.format.GPX()
         }),
         style: function(feature){
-          return style_1225(feature);
+          return style_setter(feature,'#FF0000');
         }
       })
 
-      
+
     ]
 
 })

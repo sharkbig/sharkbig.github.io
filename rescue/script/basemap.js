@@ -39,12 +39,5 @@ var basemap = new ol.layer.Group({
           })
         })
 
-
-
-
-
-
-
-
     ]
 })
