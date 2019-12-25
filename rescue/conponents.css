@@ -1,8 +1,7 @@
 .center {
 position: absolute;
 border: solid 3px red;
-top: 50%;
-left: 50%;
+margin: 0 auto;
 width: 20px;
 height: 20px;
 }
