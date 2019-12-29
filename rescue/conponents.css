@@ -1,9 +1,25 @@
-.center {
+#cross {
+
   position: absolute;
-  border: solid 3px red;
-  width: 20px;
+  /* border: solid 3px blue; */
+  background: red;
+
+  width: 3px;
   height: 20px;
   top: 50%;
   left: 50%;
-  margin: -10px 0 0 -10px;
+  margin: 0px 0px 0px 0px;
+}
+
+
+#cross:after {
+  position: absolute;
+  content: "";
+  background: red;
+  width: 20px;
+  height: 3px;
+  top: 50%;
+  left: 50%;
+  margin: -1.5px 10px 10px -9.5px;
+
 }
