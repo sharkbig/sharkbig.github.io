@@ -97,7 +97,7 @@ var track_group = new ol.layer.Group({
           format: new ol.format.GPX()
         }),
         style: function(feature){
-          return style_setter(feature,'#DDC4FFF');
+          return style_setter(feature,'#DC4FFF');
         }
       }),
     ]
