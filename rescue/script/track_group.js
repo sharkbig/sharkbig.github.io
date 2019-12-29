@@ -88,6 +88,18 @@ var track_group = new ol.layer.Group({
         }
       }),
 
+
+
+      new ol.layer.Vector({
+        title: '2019-12-29 tracks',
+        source: new ol.source.Vector({
+          url:'./data/1229_lite.gpx',
+          format: new ol.format.GPX()
+        }),
+        style: function(feature){
+          return style_setter(feature,'#D67500');
+        }
+      }),
     ]
 
 })
