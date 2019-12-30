@@ -100,6 +100,19 @@ var track_group = new ol.layer.Group({
           return style_setter(feature,'#DC4FFF');
         }
       }),
+
+      new ol.layer.Vector({
+        title: '2019-12-30 tracks',
+        source: new ol.source.Vector({
+          url:'./data/20191230 台大永暉陳芃-神木區步道1k溪溝.gpx',
+          format: new ol.format.GPX()
+        }),
+        style: function(feature){
+          return style_setter(feature,'#DC4FFF');
+        }
+      }),
+
+
     ]
 
 })
