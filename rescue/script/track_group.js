@@ -16,6 +16,7 @@ var track_group = new ol.layer.Group({
 
         new ol.layer.Vector({
           title: '20191223陳芃+天人_B區神木群',
+          visible: false,
           source: new ol.source.Vector({
             url: './data/20191223陳芃+天人_B區神木群.gpx',
             format: new ol.format.GPX()
@@ -30,6 +31,7 @@ var track_group = new ol.layer.Group({
 
         new ol.layer.Vector({
           title: '2019-12-24 tracks',
+          visible: false,
           source: new ol.source.Vector({
             url: './data/1224_lite.gpx',
             format: new ol.format.GPX()
@@ -43,6 +45,7 @@ var track_group = new ol.layer.Group({
 
       new ol.layer.Vector({
         title: '2019-12-25 tracks',
+        visible: false,
         source: new ol.source.Vector({
           url:'./data/1225_lite.gpx',
           format: new ol.format.GPX()
@@ -54,6 +57,7 @@ var track_group = new ol.layer.Group({
 
       new ol.layer.Vector({
         title: '2019-12-26 tracks',
+        visible: false,
         source: new ol.source.Vector({
           url:'./data/1226_lite.gpx',
           format: new ol.format.GPX()
@@ -67,6 +71,7 @@ var track_group = new ol.layer.Group({
 
       new ol.layer.Vector({
         title: '2019-12-27 tracks',
+        visible: false,
         source: new ol.source.Vector({
           url:'./data/1227_lite.gpx',
           format: new ol.format.GPX()
@@ -79,6 +84,7 @@ var track_group = new ol.layer.Group({
 
       new ol.layer.Vector({
         title: '2019-12-28 tracks',
+        visible: false,
         source: new ol.source.Vector({
           url:'./data/1228_lite.gpx',
           format: new ol.format.GPX()
@@ -92,6 +98,7 @@ var track_group = new ol.layer.Group({
 
       new ol.layer.Vector({
         title: '2019-12-29 tracks',
+        visible: false,
         source: new ol.source.Vector({
           url:'./data/1229_lite.gpx',
           format: new ol.format.GPX()
@@ -109,6 +116,17 @@ var track_group = new ol.layer.Group({
         }),
         style: function(feature){
           return style_setter(feature,'#DC4FFF');
+        }
+      }),
+
+      new ol.layer.Vector({
+        title: '2019-12-30 seasons',
+        source: new ol.source.Vector({
+          url:'./data/20191230_seasonsC2.gpx',
+          format: new ol.format.GPX()
+        }),
+        style: function(feature){
+          return style_setter(feature,'#DC00FF');
         }
       }),
 
