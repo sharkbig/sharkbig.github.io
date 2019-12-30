@@ -19,7 +19,8 @@ var map = new ol.Map({
   target: 'map',
   layers: [
     basemap,
-    track_group
+    track_group,
+    other
   ],
   view: new ol.View({
       center: ol.proj.fromLonLat(center),
