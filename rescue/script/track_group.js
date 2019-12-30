@@ -133,7 +133,7 @@ var track_group = new ol.layer.Group({
       new ol.layer.Vector({
         title: '2018_邊吉岩山西北陵探勘.kml',
         source: new ol.source.Vector({
-          url:'2018_邊吉岩山西北陵探勘.kml',
+          url:'./data/2018_邊吉岩山西北陵探勘.kml',
           format: new ol.format.KML()
         }),
         style: function(feature){
@@ -144,7 +144,7 @@ var track_group = new ol.layer.Group({
       new ol.layer.Vector({
         title: '2018_鎮金邊.kml',
         source: new ol.source.Vector({
-          url:'2018_鎮金邊.kml',
+          url:'./data/2018_鎮金邊.kml',
           format: new ol.format.KML()
         }),
         style: function(feature){
