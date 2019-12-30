@@ -9,7 +9,7 @@
 </metadata>
 
 <wpt lat="24.50886" lon="121.32472">
-<name>C2回報地點</name>
+<name>四季回報地點</name>
 <sym>Trail Head</sym>
 <type>user</type>
 <extensions>
@@ -24,6 +24,27 @@
   </ctx:CreationTimeExtension>
 </extensions>
 </wpt>	
+
+
+<wpt lat="24.50800" lon="121.32261">
+<name>四季回報地點</name>
+<sym>Trail Head</sym>
+<type>user</type>
+<extensions>
+  <gpxx:WaypointExtension>
+	<gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+  </gpxx:WaypointExtension>
+  <wptx1:WaypointExtension>
+	<wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+  </wptx1:WaypointExtension>
+  <ctx:CreationTimeExtension>
+	<ctx:CreationTime>2019-12-30T10:49:01Z</ctx:CreationTime>
+  </ctx:CreationTimeExtension>
+</extensions>
+</wpt>	
+
+
+
 <trk>
 <name><![CDATA[2019-12-24 09:28]]></name>
 <desc><![CDATA[<p>開始時間: 12/24/2019 11:59<br/>結束時間: 12/24/2019 17:36<br/>距離: 5.2 km (05:37)<br/>移動時間: 00:55<br/>平均速度: 0.93 km/h<br/>平均移動速度: 5.61 km/h<br/>最大速度: 25.58 km/h<br/>最低海拔: 1611 m<br/>最高海拔: 1942 m<br/>上升速度: 221.9 m/h<br/>下降速度: -141.5 m/h<br/>高度上升: 487 m<br/>高度下降: -477 m<br/>上升時間: 02:11<br/>下降時間: 03:22<br/></p><hr align="center" width="480" style="height: 2px; width: 517px"/>]]></desc>
