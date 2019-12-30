@@ -12,17 +12,6 @@
 <name>四季回報地點</name>
 <sym>Trail Head</sym>
 <type>user</type>
-<extensions>
-  <gpxx:WaypointExtension>
-	<gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-  </gpxx:WaypointExtension>
-  <wptx1:WaypointExtension>
-	<wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-  </wptx1:WaypointExtension>
-  <ctx:CreationTimeExtension>
-	<ctx:CreationTime>2019-12-30T10:49:01Z</ctx:CreationTime>
-  </ctx:CreationTimeExtension>
-</extensions>
 </wpt>	
 
 
@@ -30,17 +19,6 @@
 <name>四季回報地點</name>
 <sym>Trail Head</sym>
 <type>user</type>
-<extensions>
-  <gpxx:WaypointExtension>
-	<gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
-  </gpxx:WaypointExtension>
-  <wptx1:WaypointExtension>
-	<wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
-  </wptx1:WaypointExtension>
-  <ctx:CreationTimeExtension>
-	<ctx:CreationTime>2019-12-30T10:49:01Z</ctx:CreationTime>
-  </ctx:CreationTimeExtension>
-</extensions>
 </wpt>	
 
 
