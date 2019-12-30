@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="OruxMaps v.7.0.17" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<name><![CDATA[2019-12-24 09:28]]></name>
+<link href="http://www.oruxmaps.com">
+<text>OruxMaps</text>
+</link>
+<time>2019-12-23T20:28:20Z</time><bounds maxlat="24.5537470" maxlon="121.2936995" minlat="24.5387540" minlon="121.2904764"/>
+</metadata>
+
+<wpt lat="24.50886" lon="121.32472">
+<name>C2回報地點</name>
+<sym>Trail Head</sym>
+<type>user</type>
+<extensions>
+  <gpxx:WaypointExtension>
+	<gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+  </gpxx:WaypointExtension>
+  <wptx1:WaypointExtension>
+	<wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+  </wptx1:WaypointExtension>
+  <ctx:CreationTimeExtension>
+	<ctx:CreationTime>2019-12-30T10:49:01Z</ctx:CreationTime>
+  </ctx:CreationTimeExtension>
+</extensions>
+</wpt>	
+<trk>
+<name><![CDATA[2019-12-24 09:28]]></name>
+<desc><![CDATA[<p>開始時間: 12/24/2019 11:59<br/>結束時間: 12/24/2019 17:36<br/>距離: 5.2 km (05:37)<br/>移動時間: 00:55<br/>平均速度: 0.93 km/h<br/>平均移動速度: 5.61 km/h<br/>最大速度: 25.58 km/h<br/>最低海拔: 1611 m<br/>最高海拔: 1942 m<br/>上升速度: 221.9 m/h<br/>下降速度: -141.5 m/h<br/>高度上升: 487 m<br/>高度下降: -477 m<br/>上升時間: 02:11<br/>下降時間: 03:22<br/></p><hr align="center" width="480" style="height: 2px; width: 517px"/>]]></desc>
+<type>未定義</type>
+<extensions>
+<om:oruxmapsextensions xmlns:om="http://www.oruxmaps.com/oruxmapsextensions/1/0">
+<om:ext type="TYPE" subtype="0">0</om:ext>
+<om:ext type="DIFFICULTY">0</om:ext>
+</om:oruxmapsextensions>
+</extensions>
+<trkseg>
+
+
+</trkseg>
+</trk>
+</gpx>
