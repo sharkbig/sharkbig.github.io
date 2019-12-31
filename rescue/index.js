@@ -56,7 +56,8 @@ var map = new ol.Map({
   target: 'map',
   layers: [
     basemap,
-    track_group
+    track_group,
+    other
   ],
   overlays: [overlay],
   view: new ol.View({
