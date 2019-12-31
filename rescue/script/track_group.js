@@ -120,7 +120,7 @@ var track_group = new ol.layer.Group({
       }),
 
       new ol.layer.Vector({
-        title: '20191231.gpx',
+        title: '2019-12-31',
         source: new ol.source.Vector({
           url:'./data/20191231.gpx',
           format: new ol.format.GPX()

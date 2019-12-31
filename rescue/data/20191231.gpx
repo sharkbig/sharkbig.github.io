@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="OruxMaps v.7.0.17" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata>
-<name><![CDATA[2019-12-24 09:28]]></name>
+<name><![CDATA[2019-12-31 09:28]]></name>
 <link href="http://www.oruxmaps.com">
 <text>OruxMaps</text>
 </link>
-<time>2019-12-31T20:28:20Z</time><bounds maxlat="24.5537470" maxlon="121.2936995" minlat="24.5387540" minlon="121.2904764"/>
+<time>2019-12-31T20:28:20Z</time><bounds maxlat="24.5537470" maxlon="121.3636995" minlat="24.530" minlon="121.2904764"/>
 </metadata>
 
 
