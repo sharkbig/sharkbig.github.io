@@ -120,6 +120,17 @@ var track_group = new ol.layer.Group({
       }),
 
       new ol.layer.Vector({
+        title: '20191231.gpx',
+        source: new ol.source.Vector({
+          url:'./data/20191231.gpx',
+          format: new ol.format.GPX()
+        }),
+        style: function(feature){
+          return style_setter(feature,'#DC00FF');
+        }
+      }),
+
+      new ol.layer.Vector({
         title: '2019-12-30 seasons',
         source: new ol.source.Vector({
           url:'./data/20191230_seasonsC2.gpx',
@@ -150,7 +161,9 @@ var track_group = new ol.layer.Group({
         style: function(feature){
           return style_setter(feature,'#DC00FF');
         }
-      })
+      }),
+
+
     ]
 
 })

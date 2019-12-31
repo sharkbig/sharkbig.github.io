@@ -2,6 +2,40 @@
 var zoom = 16;
 var center = [121.30171,24.53225];
 
+
+// popup coordination
+var container = document.getElementById('popup');
+var content = document.getElementById('popup-content');
+var closer = document.getElementById('popup-closer');
+
+var overlay = new ol.Overlay({
+  element: container,
+  autoPan: true,
+  autoPanAnimation: {
+    duration: 250
+  }
+});
+closer.onclick = function() {
+  overlay.setPosition(undefined);
+  closer.blur();
+  return false;
+};
+
+
+// scale bar
+function scaleControl() {
+  control = new ol.control.ScaleLine({
+    units: 'metric',
+    bar: true,
+    steps: 4,
+    text: true,
+    minWidth: 100
+  });
+  return control;
+}
+
+
+// permalink
 if (window.location.hash !== '') {
   // try to restore center, zoom-level and rotation from the URL
   var hash = window.location.hash.replace('#map=', '');
@@ -16,15 +50,18 @@ if (window.location.hash !== '') {
 }
 
 var map = new ol.Map({
+  controls: ol.control.defaults().extend([
+    scaleControl()
+  ]),
   target: 'map',
   layers: [
     basemap,
     track_group
   ],
+  overlays: [overlay],
   view: new ol.View({
       center: ol.proj.fromLonLat(center),
       zoom: zoom
-
   })
 });
 
@@ -65,4 +102,13 @@ window.addEventListener('popstate', function(event) {
   map.getView().setCenter(event.state.center);
   map.getView().setZoom(event.state.zoom);
   shouldUpdate = false;
+});
+
+
+map.on('singleclick', function(evt) {
+    var coordinate = evt.coordinate;
+    // var hdms = toStringHDMS(toLonLat(coordinate));
+    var loc = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326')
+    content.innerHTML = loc[0].toFixed(7) + ',' + loc[1].toFixed(7)
+    overlay.setPosition(coordinate);
 });
