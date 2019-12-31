@@ -1,7 +1,6 @@
 // default zoom, center and rotation
 var zoom = 16;
-var center = [121.30171,24.53225];
-
+var center = [121.3367585,24.5220261];
 
 // popup coordination
 var container = document.getElementById('popup');

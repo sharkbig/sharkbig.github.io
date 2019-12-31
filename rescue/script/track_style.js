@@ -16,9 +16,9 @@ var style_setter = function(feature,LineColor){
     return new ol.style.Style({
         image: new ol.style.Circle({
           fill: new ol.style.Fill({
-            color: 'rgba(0,255,0,0.4)'
+            color: 'rgba(255,55,255,0.4)'
           }),
-          radius: 2,
+          radius: 5,
           stroke: new ol.style.Stroke({
             color: '#ff0',
             width: 1
@@ -27,6 +27,9 @@ var style_setter = function(feature,LineColor){
         text: new ol.style.Text({
           font:'bold 10pt Arial',
           text: name,
+          fill: new ol.style.Fill({
+            color: '#330055'
+          })
         })
       })
 
