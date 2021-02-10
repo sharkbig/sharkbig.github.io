@@ -1,0 +1,27 @@
+// Create leaflet map.
+var map = new L.Map('map').setView([-41.59490508367679, 146.77734375000003], 7);
+
+// Create & add OSM layer.
+var osm = new L.TileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+// Create & add WMS-layer.
+var tasmania = new L.TileLayer.WMS('http://demo.opengeo.org/geoserver/wms', {
+  layers: 'topp:tasmania',
+  format: 'image/png',
+  transparent: true,
+  version: '1.3.0',
+  crs: L.CRS.EPSG4326
+}).addTo(map);
+
+// Perform 'GetCapabilities' request.
+tasmania.getCapabilities({
+  done: function(capabilities) {
+  console.log('getCapabilitiessucceed: ', capabilities);
+  },
+  fail: function(errorThrown) {
+  console.log('getCapabilitiesfailed: ', errorThrown);
+  },
+  always: function() {
+  console.log('getCapabilitiesfinished');
+  }
+});
