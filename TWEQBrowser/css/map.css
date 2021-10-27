@@ -56,7 +56,7 @@
   transition: margin-left .5s;
 }
 #main h1 {
-	font-size 20px:
+	font-size: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
