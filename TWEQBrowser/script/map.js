@@ -14,11 +14,11 @@ function getColor(value){
 		} else if (value > 100) {
 			return "#00D5FF";
 		} else if (value > 50) {
-			return "#80FF00";
+			return "#2BFF00";
 		} else if (value >40){
-			return "#D4FF00";
+			return "#80FF00";
 		} else if (value > 30){
-			return "#FFD500";
+			return "#D4FF00";
 		} else if (value > 20){
 			return "#FFD500";
 		} else if (value > 10){
