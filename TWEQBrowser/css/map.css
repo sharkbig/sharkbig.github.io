@@ -39,11 +39,11 @@
 }
 
 .openbtn {
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   background-color: #111;
   color: white;
-  padding: 10px 10px;
+  
   border: none;
 }
 
